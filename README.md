@@ -20,7 +20,7 @@ Aplikacja będzie działać na komputerach i telefonach.
 * node > 8.x
 * visual studio code
 
-[szczegółówa instrukcja](docs/SETUP.md)
+[szczegółowa instrukcja](docs/SETUP.md)
 
 # Uruchomienie projektu
 
