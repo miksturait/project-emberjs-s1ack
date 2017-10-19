@@ -1,7 +1,95 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{one-component}}
-
-{{two-component}}
-
-{{outlet}}
+<div class="app-layout">
+  <div class="teams box">
+    <h4>Teams</h4>
+    <img class="w2 h2 w3-ns h3-ns mb2" alt='Selleo' src="/images/teams/selleo.png">
+    <img class="h2 h3-ns" alt='Mikstura.IT' src="/images/teams/miksturait.png">
+  </div>
+  <div class="channels box">
+    <h4>Channels</h4>
+    <ul class="tl">
+      <li class="flex pb2">#coderdojo</li>
+      <li class="flex pb2">#emberjs</li>
+      <li class="flex pb2">#emberbbmeetup</li>
+      <li class="flex pb2">#general</li>
+      <li class="flex pb2">#miksturaitmeetup</li>
+      <li class="flex pb2">#random</li>
+      <li class="flex pb2">#reactjs</li>
+    </ul>
+  </div>
+  <div class="header box">#coderdojo</div>
+  <div class="messages box">
+    <ul class="message-list tl">
+      <li class="flex">
+        <img class="w1 h1 w2-ns h2-ns" alt='avatar-name' src="/images/people/mikoszcz.png">
+        <div class="pl3 flex-auto">
+          <span class="f6 db black">
+            <strong>mikoscz</strong> [12:28 PM]</span>
+          <span class="f6 db black-70">
+            @ledom bedziemy budowac kopie FlappyBirda przy uzyciu JS’a :wink: mniej wiecej jak na filmiku
+          </span>
+        </div>
+      </li>
+      <li class="flex">
+        <img class="w1 h1 w2-ns h2-ns br-100" alt='avatar-name' src="/images/people/ledom.png">
+        <div class="pl3 flex-auto">
+          <span class="f6 db black">
+            <strong>ledom</strong> [12:34 PM]</span>
+          <span class="f6 db black-70">
+            ok, dzięki za informacje
+          </span>
+        </div>
+      </li>
+      <li class="flex">
+        <img class="w1 h1 w2-ns h2-ns" alt='avatar-name' src="/images/people/mikoszcz.png">
+        <div class="pl3 flex-auto">
+          <span class="f6 db black">
+            <strong>mikoscz</strong> [4:06 PM]</span>
+          <span class="f6 db black-70">
+            https://github.com/miksturait/tutorial-gra-w-javascript link do repo
+          </span>
+        </div>
+      </li>
+      <li class="flex">
+        <img class="w1 h1 w2-ns h2-ns br-100" alt='avatar-name' src="/images/people/alanpieczonka00.jpg">
+        <div class="pl3 flex-auto">
+          <span class="f6 db black">
+            <strong>alanpieczonka00</strong> [7:57 PM]</span>
+          <span class="f6 db black-70">
+            @mikoscz Dzięki za fajne warsztaty :wink:
+          </span>
+        </div>
+      </li>
+      <div class="header box">Friday, October 6th</div>
+      <hr>
+      <li class="flex">
+        <img class="w1 h1 w2-ns h2-ns" alt='avatar-name' src="/images/people/mikoszcz.png">
+        <div class="pl3 flex-auto">
+          <span class="f6 db black">
+            <strong>mikoscz</strong> [3:42 PM]</span>
+          <span class="f6 db black-70">
+            @channel Dzięki wszystkim za warsztaty wczoraj, w weekend postaram sie uzupelnic readme na repo aby kazdy mogl zrobić coś
+            podobnego step by step :wink:
+          </span>
+        </div>
+      </li>
+      <li class="flex">
+        <img class="w1 h1 w2-ns h2-ns" alt='avatar-name' src="/images/people/cs3b.png">
+        <div class="pl3 flex-auto">
+          <span class="f6 db black">
+            <strong>cs3b</strong> [4:32 PM]</span>
+          <span class="f6 db black-70">
+            @channel naszego coder dojo jest na crossweb :slightly_smiling_face:
+            <br>@alanpieczonka00 podał ten pomysł, wieć próbujemy :slightly_smiling_face: Dziś dodałem pozostałe 9 wydarzeń które
+            będą miały miejsce jeszcze w tym roku.
+            <br>Jeśli ty, twój kolega, mana, babcia, ciocia, wujek, brat cioteczny, ... ma konto na crossweb i chciałbym pomóc
+            wypromować nasze coder dojo, można kliknąć gwiazdkę na cyklu wydarzeń :slightly_smiling_face:
+            <br>https://crossweb.pl/cykle-wydarzen/coder-dojo-bielsko-biala/
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="input box">
+    <input type="text" placeholder="Message <channel name>">
+  </div>
+</div>
