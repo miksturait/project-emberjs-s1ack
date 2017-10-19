@@ -4,6 +4,10 @@ export default Service.extend({
   all(collection) {
    return this[collection]
   },
+  add(collection, object) {
+   this[collection].pushObject(object);
+   return object;
+  },
   messages: [
     {
       author: {
