@@ -14,5 +14,6 @@ module.exports = {
     'space-before-function-paren': 'off',
     'no-extra-semi': 2,
     quotes: [2, 'single', 'avoid-escape'],
+    'ember/alias-model-in-controller': 'off',
   }
 };
