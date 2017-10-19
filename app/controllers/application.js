@@ -18,7 +18,7 @@ export default Controller.extend({
           },
           time: '4:32 PM',
           content: msg
-      })
+      }).save();
 
       this.set('msg', '');
     }
