@@ -16,7 +16,7 @@ export default Controller.extend({
             nick: 'cs3b',
             avatarUrl: '/images/people/cs3b.png'
           },
-          time: '4:32 PM',
+          time: new Date(),
           content: msg
       }).save();
 
