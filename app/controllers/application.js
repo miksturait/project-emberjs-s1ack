@@ -53,5 +53,22 @@ export default Controller.extend({
       Jeśli ty, twój kolega, mana, babcia, ciocia, wujek, brat cioteczny, ... ma konto na crossweb i chciałbym pomóc wypromować nasze coder dojo, można kliknąć gwiazdkę na cyklu wydarzeń :slightly_smiling_face: \
       https://crossweb.pl/cykle-wydarzen/coder-dojo-bielsko-biala/'
     },
-  ]
+  ],
+  actions: {
+    sendMsg() {
+      let msg = this.get('msg');
+      let messages = this.get('messages');
+
+      messages.pushObject({
+          author: {
+            nick: 'cs3b',
+            avatarUrl: '/images/people/cs3b.png'
+          },
+          time: '4:32 PM',
+          content: msg
+      })
+
+      this.set('msg', '');
+    }
+  },
 });
