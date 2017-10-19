@@ -2,8 +2,8 @@ import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service'
 
 export default Route.extend({
-  db: service(),
+  store: service(),
   model() {
-    return this.get('db').all('messages');
+    return this.get('store').peekAll('message');
   }
 });

@@ -3,14 +3,15 @@ import { alias } from '@ember/object/computed'
 import { inject as service } from '@ember/service'
 
 export default Controller.extend({
-  db: service(),
+  store: service(),
   messages: alias('model'), 
   actions: {
     sendMsg() {
       let msg = this.get('msg');
-      let db = this.get('db');
+      let store = this.get('store');
 
-      db.add('messages', {
+
+      store.createRecord('message', {
           author: {
             nick: 'cs3b',
             avatarUrl: '/images/people/cs3b.png'
