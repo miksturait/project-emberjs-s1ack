@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "emberjs.emberjs",
+    "dhedgecock.ember-syntax",
+    "ciena-blueplanet.vsc-ember-frost",
+    "spoonscen.es6-mocha-snippets",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+    // "vscodevim.vim"
+  ]
+}
