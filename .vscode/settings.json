@@ -1,5 +1,5 @@
 {
-  "eslint.autoFixOnSave": true,
+  "eslint.autoFixOnSave": false,
   "editor.tabSize": 2,
   "editor.formatOnSave": false,
   "files.autoSave": "onWindowChange",

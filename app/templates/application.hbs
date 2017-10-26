@@ -1,7 +1,7 @@
 <div class="app-layout">
   <div class="teams box">
     {{#if session.isAuthenticated}}
-      <img {{action "signOut"}} class="br-100" src={{session.currentUser.photoURL}} >
+      <img {{action "signOut"}} class="br-100" src={{session.currentUser.photoUrl}} >
     {{else}}
       <button {{action "signIn"}}>Sign in</button>
     {{/if}}
