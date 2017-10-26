@@ -1,0 +1,15 @@
+{
+  "rules": {
+    ".read": true,
+      "messages": {
+        "$messageId": {
+          ".write": "!data.exists() && newData.exists() || auth.uid == data.child('author').val()"
+        },
+      },
+    "users": {
+      "$userId": {
+    		".write": "auth.uid == $userId"       
+      }
+    }
+  }
+}
