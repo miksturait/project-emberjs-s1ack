@@ -14,8 +14,8 @@ export default ToriiFirebaseAdapter.extend({
 
     return store.findRecord('user', uid)
       .then( function (user) {
-        user.setProperties(photoUrl, name)
-        return user.save()
+        user.setProperties(photoUrl, name);
+        return user.save();
       })
       .catch(function() {
         let user = store.createRecord('user', {photoUrl, name, id: uid});
