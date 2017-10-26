@@ -29,6 +29,9 @@ module.exports = function(environment) {
       projectId: 's1ackbb',
       storageBucket: 's1ackbb.appspot.com',
       messagingSenderId: '150753012097'
+    },
+    torii: {
+      sessionServiceName: 'session'
     }
   };
 
