@@ -18,7 +18,6 @@ export default Controller.extend({
       let msg = this.get('msg');
       let store = this.get('store');
 
-
       let message = store.createRecord('message', {
           author: session.get('currentUser'),
           time: new Date(),
