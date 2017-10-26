@@ -19,14 +19,12 @@ export default Controller.extend({
       let store = this.get('store');
 
 
-      store.createRecord('message', {
-          author: {
-            nick: 'cs3b',
-            avatarUrl: '/images/people/cs3b.png'
-          },
+      let message = store.createRecord('message', {
+          author: session.get('currentUser'),
           time: new Date(),
           content: msg
-      }).save();
+      })
+      message.save();
 
       this.set('msg', '');
     }
