@@ -1,10 +1,11 @@
 import ToriiFirebaseAdapter from 'emberfire/torii-adapters/firebase';
 import { inject as service } from '@ember/service';
+import { hash } from 'rsvp';
 
 export default ToriiFirebaseAdapter.extend({
   store: service(),
   open(authentication) {
-    return Ember.RSVP.hash({
+    return hash({
       uid: authentication.uid,
       currentUser: this._findOrCreateUser(authentication)
     })
