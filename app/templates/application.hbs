@@ -16,31 +16,12 @@
   <div class="channels box">
     <h4>Channels</h4>
     <ul class="tl">
-      <li class="flex pb2">#coderdojo</li>
-      <li class="flex pb2">#emberjs</li>
-      <li class="flex pb2">#emberbbmeetup</li>
-      <li class="flex pb2">#general</li>
-      <li class="flex pb2">#miksturaitmeetup</li>
-      <li class="flex pb2">#random</li>
-      <li class="flex pb2">#reactjs</li>
-    </ul>
-  </div>
-  <div class="header box">#coderdojo</div>
-  <div class="messages box">
-    <ul class="message-list tl">
-      {{#each messages as |msg|}}
-        <li class="flex">
-          <img class="w1 h1 w2-ns h2-ns br-100 ma2" alt= {{msg.author.name}} src= {{msg.author.photoUrl}}>
-          <div class="pl3 flex-auto">
-            <span class="f6 db black">
-              <strong>{{msg.author.name}}</strong> [{{msg.time}}]</span>
-            <span class="f6 db black-70">{{msg.content}}</span>
-          </div>
-        </li>
+      {{#each model as |channel|}}
+        {{#link-to 'channel' channel}}
+          <li class="flex pb2">{{channel.name}}</li>
+        {{/link-to}}
       {{/each}}
     </ul>
   </div>
-  <div class="input box">
-    {{input value=msg placeholder="Message #coderdojo" enter=(action 'sendMsg')}}
-  </div>
+  {{outlet}}
 </div>

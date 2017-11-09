@@ -9,7 +9,7 @@ export default Route.extend({
     return this.get('session').fetch().catch(function() {});
   },
   model() {
-    return this.get('store').findAll('message');
+    return this.store.findAll('channel');
   },
   actions: {
     signIn: function() {

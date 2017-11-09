@@ -89,3 +89,7 @@ input {
 .input {
   grid-area: input;
 }
+
+:any-link {
+  color: white;
+}
