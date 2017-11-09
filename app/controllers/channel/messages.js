@@ -17,14 +17,16 @@ export default Controller.extend({
 
       let msg = this.get('msg');
       let store = this.get('store');
+      let channel = this.get('channel')
 
       let message = store.createRecord('message', {
           author: session.get('currentUser'),
-          channel: this.get('channel'),
+          channel,
           time: new Date(),
           content: msg
       })
       message.save();
+      channel.save();
 
       this.set('msg', '');
     }
