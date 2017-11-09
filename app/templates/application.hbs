@@ -17,7 +17,7 @@
     <h4>Channels</h4>
     <ul class="tl">
       {{#each model as |channel|}}
-        {{#link-to 'channel' channel}}
+        {{#link-to 'channel.messages' channel}}
           <li class="flex pb2">{{channel.name}}</li>
         {{/link-to}}
       {{/each}}
