@@ -20,6 +20,7 @@ export default Controller.extend({
 
       let message = store.createRecord('message', {
           author: session.get('currentUser'),
+          channel: this.get('channel'),
           time: new Date(),
           content: msg
       })
