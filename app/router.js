@@ -7,12 +7,13 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('channel', { path: '/channel/:channel_id' }, function() {
-    this.route('messages');
-  });
   this.route('organizations', function() {
     this.route('organization', { path: '/:organization_id'}, function() {
-      this.route('channels', { path: '/' });
+      this.route('channels', { path: '/' }, function() {
+        this.route('channel', { path: '/:channel_id' }, function() {
+          this.route('messages');
+        });
+      });
     });
   });
 });

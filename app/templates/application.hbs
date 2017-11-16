@@ -1,3 +1,7 @@
+<div class="app-layout">
+  {{outlet}}
+</div>
+
 <div class="teams box">
   {{#if session.isAuthenticated}}
     {{#if session.currentUser.photoUrl}} 
@@ -8,8 +12,4 @@
   {{else}}
     <button {{action "signIn"}}>Sign in</button>
   {{/if}}
-</div>
-
-<div class="app-layout">
-  {{outlet}}
 </div>
