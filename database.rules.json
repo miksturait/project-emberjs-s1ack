@@ -1,6 +1,7 @@
 {
   "rules": {
     ".read": true,
+    ".write": "auth.uid != null",  
       "messages": {
         "$messageId": {
           ".write": "!data.exists() && newData.exists() || auth.uid == data.child('author').val()"
