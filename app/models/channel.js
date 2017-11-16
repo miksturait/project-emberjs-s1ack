@@ -3,5 +3,6 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   name: DS.attr('string'),
   title: DS.attr('string'),
-  messages: DS.hasMany('message')
+  messages: DS.hasMany('message'),
+  organization: DS.belongsTo('organization')
 });
