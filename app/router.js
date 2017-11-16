@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('channel', { path: '/channel/:channel_id' }, function() {
     this.route('messages');
   });
+  this.route('organizations');
 });
 
 export default Router;
