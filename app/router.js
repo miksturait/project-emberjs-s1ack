@@ -11,7 +11,9 @@ Router.map(function() {
     this.route('messages');
   });
   this.route('organizations', function() {
-    this.route('organization', { path: '/:organization_id'});
+    this.route('organization', { path: '/:organization_id'}, function() {
+      this.route('channels', { path: '/' });
+    });
   });
 });
 
