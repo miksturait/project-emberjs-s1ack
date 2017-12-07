@@ -5,6 +5,4 @@
     {{/each}}
   </ul>
 </div>
-<div class="input box">
-  {{input value=msg placeholder="Message #coderdojo" enter=(action 'sendMsg')}}
-</div>
+{{add-message channel=channel}}
