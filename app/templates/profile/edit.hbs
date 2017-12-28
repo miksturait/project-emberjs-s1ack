@@ -1,23 +1,15 @@
-
-<div class="list measure center ba pa2">
-  <label class="f6 b db mb2 w-30">Nick</label>
-  {{input classNames="input-reset ba b--black-20 pa2 mb2 db w-100" value=model.nick}}
-  <label class="f6 b db mb2 w-30">What I do</label>
-  {{input classNames="input-reset ba b--black-20 pa2 mb2 db w-100" value=model.whatIDo}}
-  <label class="f6 b db mb2 w-30">Status</label>
-  {{input classNames="input-reset ba b--black-20 pa2 mb2 db w-100" value=model.status}}
-  <label class="f6 b db mb2 w-30">Street</label>
-  {{input classNames="input-reset ba b--black-20 pa2 mb2 db w-100" value=model.street}}
-  <label class="f6 b db mb2 w-30">City</label>
-  {{input classNames="input-reset ba b--black-20 pa2 mb2 db w-100" value=model.city}}
-  <label class="f6 b db mb2 w-30">Secondary Email</label>
-  {{input classNames="input-reset ba b--black-20 pa2 mb2 db w-100" value=model.secondaryEmail}}
-  <label class="f6 b db mb2 w-30">Timezone</label>
-  {{input classNames="input-reset ba b--black-20 pa2 mb2 db w-100" value=model.timezone}}
-
-  <div class="flex flex-row-reverse">
-    <div role="button" {{action 'save'}} class="near-white bg-animate mw-20 bg-near-black hover-bg-gray inline-flex items-center ma2 tc br2 pa2">
-      <span class="f6 pl2 pr2">Save</span>
-    </div>
-  </div>
-</div>
+{{#x-form as |f|}}
+  {{f.input model.nick label="Nick"}}
+  {{f.input model.whatIDo label="What I Do"}}
+  {{f.input model.status label="Status"}}
+  {{f.input model.since label="Since"}}
+  {{f.input model.street label="Street"}}
+  {{f.input model.city label="City"}}
+  {{f.input model.secondaryEmail label="Secondary Email"}}
+  {{f.input model.timezone label="Timezone"}}
+  {{#f.buttons}}
+    {{f.button "Cancel" onClick=(action 'cancel')}}
+    {{f.button "Save changes" onClick=(action 'save')}}
+  {{/f.buttons}} 
+{{/x-form}}
+    
