@@ -1,11 +1,14 @@
+<div class="list flex flex-row flex-wrap measure center ba pa2">
+  <label class="f6 b db mb2 w-20">Nick</label><span class="w-80">{{model.nick}}</span>
+  <label class="f6 b db mb2 w-20">What I do</label><span class="w-80">{{model.whatIDo}}</span>
+  <label class="f6 b db mb2 w-20">Status</label><span class="w-80">{{model.status}}</span>
+  <label class="f6 b db mb2 w-20">Street</label><span class="w-80">{{model.street}}</span>
+  <label class="f6 b db mb2 w-20">City</label><span class="w-80">{{model.city}}</span>
+  <label class="f6 b db mb2 w-20">Secondary Email</label><span class="w-80">{{model.secondaryEmail}}</span>
+  <label class="f6 b db mb2 w-20">Timezone</label><span class="w-80">{{model.timezone}}</span>
+</div>
 
-{{link-to 'edit' 'profile.edit'}}
+<div class="flex items-end bg-black mt5">
+  {{link-to 'edit' 'profile.edit' classNames="f5 no-underline black bg-animate hover-bg-black hover-white inline-flex items-center pa3 ba border-box mr4"}}
+</div>
 
-<p>Nick: {{model.nick}}</p>
-<p>What I do: {{model.whatIDo}}</p>
-<p>Status: {{model.status}}</p>
-
-<p>Street: {{model.street}}</p>
-<p>City: {{model.city}}</p>
-<p>Secondary Email: {{model.secondaryEmail}}</p>
-<p>Timezone: {{model.timezone}}</p>

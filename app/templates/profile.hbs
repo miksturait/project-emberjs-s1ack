@@ -1,14 +1,13 @@
-<p>Name: {{model.name}}</p>
-<p>Email: {{model.email}}</p>
-<p>Avatar: <img alt={{model.name}} src={{model.photoUrl}}></p>
-<div>
-  &nbps;
+<div class="flex items-center tc vh-25">
+  <div class="w-40">{{model.name}}</div>
+  <div class="w-20">
+    <img class="br-100" width="60" alt={{model.name}} src={{avatarUrl}} >
+  </div>
+  <div class="w-40">
+    {{model.email}}
+  </div>
 </div>
-<div>
-  &nbps;
-</div>
-<div style="background-color:cornflowerblue">
+
+<div class="vh-75 overflow-container">
   {{outlet}}
-
-
 </div>
