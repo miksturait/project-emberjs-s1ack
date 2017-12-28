@@ -1,10 +1,12 @@
-<div class="teams box">
-  <h4>Teams</h4>
-  {{#each model as |org|}}
-    {{#link-to 'organizations.organization' org}}
-      <img class="w2 h2 w3-ns h3-ns mb2" alt={{org.name}} src={{org.image}}>
-    {{/link-to}}
-  {{/each}}
-</div>
+<div class="app-layout">
+  <div class="teams box">
+    <h4>Teams</h4>
+    {{#each model as |org|}}
+      {{#link-to 'organizations.organization' org}}
+        <img class="w2 h2 w3-ns h3-ns mb2" alt= {{org.name}} src= {{org.image}}>
+      {{/link-to}}
+    {{/each}}
+  </div>
 
-{{outlet}}
+  {{outlet}}
+</div>
