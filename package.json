@@ -28,6 +28,7 @@
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-mocha": "^0.14.4",
+    "ember-cli-moment-shim": "^3.5.0",
     "ember-cli-shims": "^1.1.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-template-lint": "^0.7.5",
@@ -35,6 +36,7 @@
     "ember-data": "~2.16.2",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
+    "ember-moment": "^7.5.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.16.0",
     "emberfire": "^2.0.8",
@@ -45,5 +47,8 @@
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
+  },
+  "dependencies": {
+    "pikaday": "^1.7.0"
   }
 }
