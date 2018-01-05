@@ -1,0 +1,7 @@
+<label class="f6 b db mb2 w-30">{{label}}</label>
+<select onchange={{action "setSelection" value="target.value"}} name={{label}}>
+  <option disabled selected>Select your city</option>
+  {{#each options as |option|}}
+    <option value={{option.value}}>{{option.label}}</option>
+  {{/each}}
+</select>
