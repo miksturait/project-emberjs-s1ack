@@ -1,13 +1,13 @@
 {{#x-form as |f|}}
-  {{f.input model.nick label="Nick"}}
-  {{f.input model.whatIDo label="What I Do"}}
-  {{f.input model.status label="Status"}}
-  {{f.input model.since label="Since"}}
-  {{f.input model.street label="Street"}}
-  {{f.input model.city label="City"}}
-  {{f.input model.secondaryEmail label="Secondary Email"}}
-  {{f.input model.timezone label="Timezone"}}
-  {{f.date  model.birthday label="Birthday"}}
+  {{f.input user.nick label="Nick"}}
+  {{f.input user.whatIDo label="What I Do"}}
+  {{f.input user.status label="Status"}}
+  {{f.input user.since label="Since"}}
+  {{f.input user.street label="Street"}}
+  {{f.input user.city label="City"}}
+  {{f.input user.secondaryEmail label="Secondary Email"}}
+  {{f.select user.timezone label="Timezone" options=options}}
+  {{f.date  user.birthday label="Birthday"}}
   {{#f.buttons}}
     {{f.button "Cancel" onClick=(action 'cancel')}}
     {{f.button "Save changes" onClick=(action 'save')}}
