@@ -24,5 +24,9 @@ export default Select.extend({
 
       set(this, 'value', value);
     });
+  },
+  willDestroyElement(){
+    this._super(...arguments);
+    $('select').select2('destroy');
   }
 })
