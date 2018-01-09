@@ -6,7 +6,7 @@
   {{f.input user.street label="Street"}}
   {{f.input user.city label="City"}}
   {{f.input user.secondaryEmail label="Secondary Email"}}
-  {{f.select user.timezone label="Timezone" options=options}}
+  {{f.select2 user.timezone label="Timezone" options=options}}
   {{f.date  user.birthday label="Birthday"}}
   {{#f.buttons}}
     {{f.button "Cancel" onClick=(action 'cancel')}}
