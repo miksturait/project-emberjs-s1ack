@@ -4,10 +4,11 @@ import { alias } from '@ember/object/computed';
 
 export default Controller.extend({
   router: service(),
-  options: [ 
-    {label: 'Warsaw', value: '+1'}, 
-    {label: 'London', value: '0'}
-  ],
+  options: [  
+    {id: '0', text: 'London'}, 
+    {id: '+1', text: 'Warsaw'}, 
+    {id: '+2', text: 'Helsinki'}
+  ], 
   user: alias('model'),
   actions: {
     save() {
