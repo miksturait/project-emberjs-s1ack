@@ -1,9 +1,14 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
-import { get, setProperties } from '@ember/object';
+import { alias } from '@ember/object/computed';
 
 export default Controller.extend({
   router: service(),
+  options: [ 
+    {label: 'Warsaw', value: '+1'}, 
+    {label: 'London', value: '0'}
+  ],
+  user: alias('model'),
   actions: {
     save() {
       this.model.save();

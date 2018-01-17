@@ -8,7 +8,9 @@ module.exports = function(defaults) {
     // Add options here
   });
 
-  app.import('node_modules/tachyons/css/tachyons.min.css')
+  app.import('node_modules/tachyons/css/tachyons.min.css');
+  app.import('node_modules/pikaday/css/pikaday.css');
+  app.import('node_modules/pikaday/pikaday.js');
 
   return app.toTree();
 };
