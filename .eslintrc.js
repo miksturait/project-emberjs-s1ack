@@ -15,5 +15,8 @@ module.exports = {
     'no-extra-semi': 2,
     quotes: [2, 'single', 'avoid-escape'],
     'ember/alias-model-in-controller': 'off',
+    'ember/named-functions-in-promises':[2, {
+      allowSimpleArrowFunction: true,
+    }]
   }
 };
