@@ -1,6 +1,7 @@
 import ToriiFirebaseAdapter from 'emberfire/torii-adapters/firebase';
 import { inject as service } from '@ember/service';
 import { hash } from 'rsvp';
+import { get, setProperties } from '@ember/object';
 
 export default ToriiFirebaseAdapter.extend({
   store: service(),
@@ -11,16 +12,17 @@ export default ToriiFirebaseAdapter.extend({
     })
   },
   _findOrCreateUser({uid, photoURL: photoUrl, displayName: name}) {
-    let store = this.get('store');
-
+    let store = get(this,'store');
     return store.findRecord('user', uid)
-      .then( function (user) {
-        user.setProperties(photoUrl, name);
-        return user.save();
-      })
-      .catch(function() {
-        let user = store.createRecord('user', {photoUrl, name, id: uid});
-        return user.save();
-      })
+      .then((user) => this._findUser(user, photoUrl, name))
+      .catch(() => this._createUser(photoUrl, name));
+  },
+  _findUser(user, photoUrl, name) {
+    setProperties(user, photoUrl, name);
+    return user.save();
+  },
+  _createUser(photoUrl, name) {
+    let user = get(this,'store').createRecord('user', {photoUrl, name});
+    return user.save();
   }
 });
