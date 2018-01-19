@@ -2,10 +2,10 @@
 
 <div class="teams box">
   {{#if session.isAuthenticated}}
-    {{#if session.currentUser.photoUrl}} 
-      <img {{action "signOut"}} class="br-100" width="60" alt={{session.currentUser.name}} src={{session.currentUser.photoUrl}} >
+    {{#if session.currentUser.photoUrl}}
+      <img role="button" {{action "signOut"}} alt="user picture" class="br-100" width="60" alt={{session.currentUser.name}} src={{session.currentUser.photoUrl}} >
     {{else}}
-      <img {{action "signOut"}} class="br-100" width="60" src="https://placehold.it/50x50.jpg/ffffff/000?text=Me" >
+      <img role="button" {{action "signOut"}} alt="placeholder" class="br-100" width="60" src="https://placehold.it/50x50.jpg/ffffff/000?text=Me" >
     {{/if}}
   {{else}}
     <button {{action "signIn"}}>Sign in</button>

@@ -1,9 +1,9 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
-
+import { get } from '@ember/object';
 export default Route.extend({
   session: service(),
   model() {
-   return this.session.get('currentUser');
+   return get(this.session,'currentUser');
   }
 });
