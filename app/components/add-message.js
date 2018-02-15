@@ -27,7 +27,7 @@ export default Component.extend({
       message.save();
       channel.save();
 
-      set(set,'msg', '');
+      set(this,'msg', '');
     }
   },
 });
