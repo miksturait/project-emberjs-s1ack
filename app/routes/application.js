@@ -1,26 +1,34 @@
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service'
+import { get } from '@ember/object';
 
 export default Route.extend({
   store: service(),
   session: service(),
 
   beforeModel: function() {
-    return this.get('session').fetch().catch(function() {});
+    return get(this,'session').fetch().catch(() => this._terminate() );
   },
   model() {
     return this.store.findAll('channel');
   },
   actions: {
-    signIn: function() {
-      this.get('session').open('firebase', { provider: 'google'})
-      .then(function(data) {
-        console.log(data.currentUser);
-      })
-      .catch((error) => console.log(error));
+    signIn() {
+      get(this,'session').open('firebase', { provider: 'google'})
+      .then((data) => this._printUser(data))
+      .catch((error) => this._printError(error));
     },
-    signOut: function() {
-      this.get('session').close();
+    signOut() {
+      get(this,'session').close();
     }
+  },
+  _printUser(data) {
+    return console.log(data.currentUser);
+  },
+  _printError(data) {
+    return console.log(data);
+  },
+  _terminate() {
+    return {};
   }
 });

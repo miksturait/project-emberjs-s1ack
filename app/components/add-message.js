@@ -1,24 +1,25 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
+import { get, set} from '@ember/object';
 
 export default Component.extend({
   store: service(),
   session: service(),
   actions: {
     sendMsg() {
-      let session = this.get('session');
+      let session = get(this,'session');
 
-      if (!session.get('isAuthenticated')) {
+      if (!get(session,'isAuthenticated')) {
        alert('Please log in first');
        return false;
       }
 
-      let msg = this.get('msg');
-      let store = this.get('store');
-      let channel = this.get('channel')
+      let msg = get(this,'msg');
+      let store = get(this,'store');
+      let channel = get(this,'channel')
 
       let message = store.createRecord('message', {
-          author: session.get('currentUser'),
+          author: get(session,'currentUser'),
           channel,
           time: new Date(),
           content: msg
@@ -26,7 +27,7 @@ export default Component.extend({
       message.save();
       channel.save();
 
-      this.set('msg', '');
+      set(set,'msg', '');
     }
   },
 });

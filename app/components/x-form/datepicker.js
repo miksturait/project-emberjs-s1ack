@@ -1,3 +1,4 @@
+/* globals Pikaday */
 import Date from 's1ack/components/x-form/date';
 import { get, set} from '@ember/object';
 
@@ -7,7 +8,7 @@ export default Date.extend({
     this._super(...arguments);
 
     set(this, 'pikaday', new Pikaday({
-           field: this.element.querySelector('input'), // or we can use JQuery 
+           field: this.element.querySelector('input'), // or we can use JQuery
            format: 'YYYY-MM-DD',
            position: 'top right',
            showDaysInNextAndPreviousMonths: true,

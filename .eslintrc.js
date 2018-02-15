@@ -10,6 +10,7 @@ module.exports = {
   },
   rules: {
     'no-console': [1, { allow: ['warn', 'error'] }],
+    'no-debugger': 0,
     'comma-dangle': [2, 'only-multiline'],
     'space-before-function-paren': 'off',
     'no-extra-semi': 2,
