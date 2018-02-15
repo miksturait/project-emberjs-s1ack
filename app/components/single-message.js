@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { get } from '@ember/object';
 
 export default Component.extend({
   tagName: 'li',
@@ -6,5 +7,12 @@ export default Component.extend({
   didInsertElement() {
     this._super(...arguments);
     this.element.scrollIntoView();
+  },
+
+  actions: {
+    pinMessage() {
+      get(this, 'msg').toggleProperty('pinned');
+      get(this, 'msg').save();
+    }
   }
 });
