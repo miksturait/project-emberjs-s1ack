@@ -9,6 +9,6 @@ export default Route.extend({
 
   setupController(controller, model) {
     this._super(controller, model);
-    set(set,'channel', this.channel)
+    set(controller,'channel', this.channel)
   }
 });
