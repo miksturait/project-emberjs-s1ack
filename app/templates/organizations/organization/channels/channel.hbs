@@ -1,1 +1,8 @@
-{{channel-header channel=model}} {{outlet}}
+{{channel-header channel=model showPinned=showPinned}} {{outlet}}
+{{#if showPinned}}
+  {{#sneak-pane}}
+    {{#each model.pinnedMessages as |pinnedMessage|}}
+      {{pinnedMessage.content}}
+    {{/each}}
+  {{/sneak-pane}}
+{{/if}}

@@ -99,3 +99,18 @@ a {
 .pinned {
   font-size: 4px;
 }
+
+.page-content {
+  +animate(max-width)
+  +clearfix
+  max-width: 100%
+  position: relative
+  will-change: max-width
+}
+.sidebar {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  visibility: visible;
+}
+.sidebar--open + .page-content + .sidebar {
+}
