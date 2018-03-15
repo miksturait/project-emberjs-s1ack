@@ -15,6 +15,7 @@ module.exports = {
     'space-before-function-paren': 'off',
     'no-extra-semi': 2,
     quotes: [2, 'single', 'avoid-escape'],
+    'ember/use-ember-get-and-set': 'off',
     'ember/alias-model-in-controller': 'off',
     'ember/named-functions-in-promises':[2, {
       allowSimpleArrowFunction: true,
