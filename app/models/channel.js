@@ -6,5 +6,6 @@ export default DS.Model.extend({
   title: DS.attr('string'),
   messages: DS.hasMany('message'),
   organization: DS.belongsTo('organization'),
+  users: DS.hasMany('user'),
   pinnedMessages: filterBy('messages', 'pinned', true),
 });

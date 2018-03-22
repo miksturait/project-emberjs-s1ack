@@ -34,7 +34,7 @@ export default Component.extend({
       let channel = get(this,'channel')
 
       let message = store.createRecord('message', {
-          author: get(session,'currentUser'),
+          author: get(session, 'currentUser'),
           channel,
           time: new Date(),
           content: msg
