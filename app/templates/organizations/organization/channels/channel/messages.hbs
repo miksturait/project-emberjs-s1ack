@@ -1,8 +1,12 @@
-<div class="messages box">
-  <ul class="message-list tl">
-    {{#each messages as |msg|}}
-      {{single-message msg=msg}}
-    {{/each}}
-  </ul>
-</div>
+{{#if (can 'see message' channel=channel)}}
+  <div class="messages box">
+    <ul class="message-list tl">
+      {{#each messages as |msg|}}
+        {{single-message msg=msg}}
+      {{/each}}
+    </ul>
+  </div>
+{{else}}
+  Join
+{{/if}}
 {{add-message channel=channel}}
