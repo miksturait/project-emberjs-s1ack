@@ -1,1 +1,4 @@
-{{mentionable-input value=msg config=asyncConfig click=(action 'sendMsg')}}
+<form {{action 'sendMsg' on='submit'}}>
+  {{mentionable-input value=msg config=asyncConfig}}
+  <button type='submit'>send message</button>
+</form>
